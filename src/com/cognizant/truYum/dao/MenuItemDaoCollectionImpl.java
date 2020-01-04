@@ -1,6 +1,7 @@
 package com.cognizant.truyum.dao;
 
 import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 
@@ -52,24 +53,22 @@ public class MenuItemDaoCollectionImpl implements MenuItemDao {
 
     @Override
     public void modifyMenuItem(MenuItem menuitem) {
-        for(int i=0;i<menuItemList.size();i++) {
-            if(menuItemList.get(i).getId()==menuitem.getId()) {
+        for (int i = 0; i < menuItemList.size(); i++) {
+            if (menuItemList.get(i).getId() == menuitem.getId()) {
                 menuItemList.set(i, menuitem);
-                   
-                }
+
             }
         }
-
-    
+    }
 
     @Override
     public MenuItem getMenuItem(long menuItemId) {
-         for(MenuItem menuItem:menuItemList) {
-             if(menuItem.getId()==menuItemId) {
-                 return menuItem;
-             }
-             
-         }
+        for (MenuItem menuItem : menuItemList) {
+            if (menuItem.getId() == menuItemId) {
+                return menuItem;
+            }
+
+        }
         return null;
     }
 
