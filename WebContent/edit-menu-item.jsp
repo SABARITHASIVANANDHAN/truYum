@@ -47,7 +47,7 @@
                     </c:otherwise>
                     </c:choose>
                 <td><f:formatDate value="${menuItem.getDateOfLaunch()}" pattern="dd/MM/yyyy"
-                        var="dateOfLaunch" /> <input type="date" name="dateOfLaunch" id="dol"
+                        var="dateOfLaunch" /> <input type="text"  name="dateOfLaunch" id="dol"
                     value="${dateOfLaunch}" autocomplete="off" placeholder="27/04/2022" /></td>
                 <td><select name="category">
                         <option value="${menuItem.getCategory()}">${menuItem.getCategory()}</option>
@@ -63,7 +63,7 @@
                             <input type="checkbox" name="freeDelivery" value="Yes" checked="checked" />Free Delivery
                     </c:when>
                         <c:otherwise>
-                            <input type="checkbox" name="freeDelivery" value="No" checked="checked" />Free Delivery
+                            <input type="checkbox" name="freeDelivery" value="No"  />Free Delivery
                     </c:otherwise>
                     </c:choose></td>
             </tr>
