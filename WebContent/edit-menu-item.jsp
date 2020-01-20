@@ -45,9 +45,9 @@
                             <input type="radio" name="active" value="Yes" />Yes
                      <input type="radio" name="active" value="No" checked="checked" />No
                     </c:otherwise>
-                    </c:choose>
+                    </c:choose></td>
                 <td><f:formatDate value="${menuItem.getDateOfLaunch()}" pattern="dd/MM/yyyy"
-                        var="dateOfLaunch" /> <input type="text"  name="dateOfLaunch" id="dol"
+                        var="dateOfLaunch" /> <input type="text"  name="dateOfLaunch" id="date-of-launch"
                     value="${dateOfLaunch}" autocomplete="off" placeholder="27/04/2022" /></td>
                 <td><select name="category">
                         <option value="${menuItem.getCategory()}">${menuItem.getCategory()}</option>

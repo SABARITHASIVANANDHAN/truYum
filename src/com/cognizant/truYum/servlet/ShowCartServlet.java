@@ -38,7 +38,5 @@ public class ShowCartServlet extends HttpServlet {
             request.getRequestDispatcher("cart-empty.jsp").forward(request, response);
 
         }
-
     }
-
 }

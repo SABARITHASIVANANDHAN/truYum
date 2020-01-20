@@ -35,7 +35,8 @@
                         <c:when test="${menuItem.isFreeDelivery()==true}">Yes</c:when>
                         <c:otherwise>No</c:otherwise>
                     </c:choose></td>
-                <td align="right">Rs. ${menuItem.getPrice()}</td>
+                <td align="right"><f:formatNumber type="currency" currencySymbol="Rs."
+                        value="${menuItem.getPrice()}" /></td>
                 <td align="center"><a href="RemoveCart?menuItemId=${menuItem.getId()}">Delete
                 </a></td>
             </tr>
@@ -43,7 +44,8 @@
         <tr>
             <th></th>
             <th align="left">Total</th>
-            <th align="right">Rs.${cart.getTotal()}</th>
+            <th align="right"><f:formatNumber type="currency" currencySymbol="Rs."
+                        value="${cart.getTotal()}" /></th>
         </tr>
     </table>
     <footer> <span id="copy-right">Copyright &copy; 2019</span> </footer>
